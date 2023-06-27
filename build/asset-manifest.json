@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f5bff129.css",
+    "main.js": "/static/js/main.ba417722.js",
+    "static/media/main.gif": "/static/media/main.2d2d4ceb4cca5b5c112f.gif",
+    "static/media/main2.gif": "/static/media/main2.b7b23c1cbd990eb4c495.gif",
+    "static/media/small.gif": "/static/media/small.4e5b10c901310813b388.gif",
+    "static/media/Interphases_Regular.ttf": "/static/media/Interphases_Regular.e42af6b7e1b4ec6f2bf6.ttf",
+    "static/media/Interphases_Bold.ttf": "/static/media/Interphases_Bold.b64bd9dc77f4ed8c4148.ttf",
+    "static/media/book.svg": "/static/media/book.ce9b594904b67712df5091cd117c67dd.svg",
+    "static/media/Lastica.ttf": "/static/media/Lastica.a211c6b3cf7f2af877b9.ttf",
+    "static/media/aritmatic.svg": "/static/media/aritmatic.74121e4b5b5a288693d40869c018019e.svg",
+    "static/media/globe.svg": "/static/media/globe.8db079228e6002ecdd0530a1a6fa8d4d.svg",
+    "static/media/paper.svg": "/static/media/paper.e492aa3a74d4d898e0ab075c456091ef.svg",
+    "static/media/computer.svg": "/static/media/computer.4cc607201d48a8e936d335d4656ce1ad.svg",
+    "static/media/man.svg": "/static/media/man.f50195c17b2db54cadc12b3ab578a809.svg",
+    "static/media/light.svg": "/static/media/light.bdc884754369a99d5d31caa02047b69d.svg",
+    "index.html": "/index.html",
+    "main.f5bff129.css.map": "/static/css/main.f5bff129.css.map",
+    "main.ba417722.js.map": "/static/js/main.ba417722.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f5bff129.css",
+    "static/js/main.ba417722.js"
+  ]
+}
