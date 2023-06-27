@@ -1,0 +1,68 @@
+.main .choices {
+    padding-bottom: 150px;
+}
+
+.home-page {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    gap: 100px;
+    justify-content: center;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+
+    h1 {
+        font-size: em(60px);
+
+        span {
+            color: $pink;
+        }
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        span {
+            font-size: em(25px);
+        }
+    }
+
+    button {
+        margin-top: 10px;
+        @include btn;
+    }
+}
+
+.images {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    div {
+        height: 100%;
+        position: relative;
+        top: 10px;
+        z-index: 5;
+        height: $ball-size;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: scale-down;
+        }
+    }
+
+    div:last-child {
+        height: $ball-size + 5%;
+        top: -75px;
+        z-index: 0;
+    }
+}

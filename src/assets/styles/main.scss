@@ -1,0 +1,17 @@
+// importing setup folder
+@import "./setup/variables";
+@import "./setup/typography";
+@import "./setup/functions";
+@import "./setup/mixins";
+
+
+// importing basics folder
+@import "./basics/base";
+
+
+// importing views folder
+@import "./views/HomePage";
+@import "./views/ChatPage";
+
+// importing components folder
+@import "./cmps/chatSelector";

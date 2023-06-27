@@ -1,0 +1,52 @@
+// Buttons
+@mixin btn($b-radius: 100px, $p-sides: 40px, $p-top: 10px, $b-color: transparent) {
+    border: none;
+    background-color: $white;
+    color: $purple-1;
+    font-weight: 700;
+    font-size: em(20px);
+    border-radius: $b-radius;
+    border: $b-color 1px solid;
+    padding: $p-top $p-sides;
+    cursor: pointer;
+    transition: background-color .2s;
+
+    &:hover {
+        background-color: darken($color: $white, $amount: 20);
+    }
+}
+
+@mixin choice-btn() {
+    border: none;
+    background-color: transparent;
+    color: $white;
+    border: 1px solid $white;
+    padding: 20px 20px;
+    font-size: em(20px);
+    cursor: pointer;
+}
+
+// Input
+@mixin chatInput() {
+    background-color: $white;
+    color: $blk;
+    border: 2px solid gray;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: em(20px);
+}
+
+@mixin textInput() {
+    border: none;
+    border-radius: 4px;
+    padding-left: 10px;
+    font-family: Interphase;
+    font-size: em(15.5px);
+    color: $blk;
+
+    &::placeholder {
+        // font-size: em(12px);
+        color: #999;
+        font-family: Interphase;
+    }
+}
