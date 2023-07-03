@@ -28,7 +28,7 @@ export function HomePage() {
 
     const handlePageRefresh = () => {
         localStorage.setItem('scrollPosition', window.pageYOffset.toString());
-    };
+    }
 
     return (
         <>

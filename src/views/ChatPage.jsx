@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { chatOptions } from '../services/chat.service.ts';
+import { chatOptions } from '../services/chat.service.js';
 
 import { AiOutlineSend } from 'react-icons/ai';
 import { IoIosArrowBack } from 'react-icons/io';
-import { BsClipboard } from 'react-icons/bs';
 import { useNavigate, useSearchParams } from 'react-router-dom';
+import personLogo from '../assets/images/man.svg';
+import balls from '../assets/images/small.gif';
 import { messageGPT } from "../services/api.js";
-import personLogo from '../assets/images/man.svg'
-import balls from '../assets/images/small.gif'
+
 export function ChatPage() {
     const navigate = useNavigate()
     const [searchParams] = useSearchParams()
@@ -24,6 +24,10 @@ export function ChatPage() {
 
     useEffect(() => {
         getChatPageData()
+
+        return () => {
+
+        }
     }, [])
 
     function getChatPageData() {
@@ -77,18 +81,20 @@ export function ChatPage() {
     return (
         <>
             <div className="chat-page">
-                <div className="img">
-                    <img src={balls} alt="" />
-                </div>
                 <div className="chat-top">
+                    <div className="img">
+                        <img src={balls} alt="" />
+                    </div>
                     <div>
                         <h2>{chatData?.btnText}</h2>
                         <div className="second-header">
                             <span>{chatData?.headlineText}</span>
                         </div>
                     </div>
+
                     <button onClick={() => navigate('/')}><IoIosArrowBack /></button>
                 </div>
+
                 <div className="chatbox-container">
                     <span>{chatData?.inputText + ': '}</span>
                     <form className="chatbox-form" onSubmit={sendInput}>

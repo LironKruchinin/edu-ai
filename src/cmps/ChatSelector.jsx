@@ -5,7 +5,7 @@ import image4 from '../assets/images/computer.svg'
 import image2 from '../assets/images/globe.svg'
 import image5 from '../assets/images/light.svg'
 import image6 from '../assets/images/paper.svg'
-import { chatOptions } from "../services/chat.service.ts"
+import { chatOptions } from "../services/chat.service.js"
 
 export function ChatSelector() {
     const navigate = useNavigate()

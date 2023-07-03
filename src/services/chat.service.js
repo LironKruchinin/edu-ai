@@ -1,6 +1,5 @@
-import { ChatOptions } from "../types/chatOptions";
 
-export const chatOptions: ChatOptions[] = [
+export const chatOptions = [
     {
         btnText: 'Summerize books',
         imageAlt: 'An open book',

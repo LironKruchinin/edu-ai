@@ -66,3 +66,89 @@
         z-index: 0;
     }
 }
+
+@media (max-width: $breakpoint-xs) {
+
+    /* Your CSS rules for extra small devices here */
+    .content {
+        padding: 0;
+    }
+
+    .home-page {
+        padding: 0;
+
+        .images {
+            display: none;
+        }
+
+        .text {
+            h1 {
+                font-size: em(40px);
+            }
+
+            div {
+                font-size: em(11px);
+            }
+        }
+    }
+
+    .image-button {
+        display: none;
+
+        .img-container {
+            display: none;
+        }
+    }
+
+    .choices {
+        padding: 0;
+    }
+}
+
+@media (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm) {
+    .home-page {
+        padding: 0;
+
+        .images {
+            height: 480px;
+        }
+
+        .text {
+            h1 {
+                font-size: em(50px);
+            }
+
+            div {
+                font-size: em(11px);
+            }
+        }
+    }
+}
+
+@media (min-width:$breakpoint-sm) and (max-width: $breakpoint-md) {
+    .home-page {
+        padding: 0;
+
+        .images {
+            height: 480px;
+        }
+
+        .text {
+            h1 {
+                font-size: em(50px);
+            }
+
+            div {
+                font-size: em(11px);
+            }
+        }
+    }
+}
+
+@media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+    /* Your CSS rules for large devices here */
+}
+
+@media (min-width: $breakpoint-xl) {
+    /* Your CSS rules for extra large devices here */
+}
