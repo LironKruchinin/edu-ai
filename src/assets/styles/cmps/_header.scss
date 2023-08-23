@@ -1,0 +1,17 @@
+nav {
+    display: flex;
+
+    ul {
+        display: flex;
+        gap: 10px;
+    }
+
+    li {
+        list-style: none;
+
+        a {
+            color: $white;
+            padding: 25px 5px;
+        }
+    }
+}

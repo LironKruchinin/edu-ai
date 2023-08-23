@@ -3,15 +3,22 @@
 @import "./setup/typography";
 @import "./setup/functions";
 @import "./setup/mixins";
+// @import "./setup/";
 
 
 // importing basics folder
 @import "./basics/base";
+// @import "./basics/";
 
 
 // importing views folder
 @import "./views/HomePage";
 @import "./views/ChatPage";
+// @import "./views/";
 
 // importing components folder
 @import "./cmps/chatSelector";
+@import "./cmps/LoadingSpinner";
+@import "./cmps/Login";
+@import "./cmps/header";
+// @import "./cmps/";

@@ -1,5 +1,7 @@
 import { ChatPage } from "./views/ChatPage";
 import { HomePage } from "./views/HomePage";
+import Login from "./views/Login";
+import Register from "./views/Register";
 
 const routes = [
     {
@@ -12,6 +14,17 @@ const routes = [
         component: <ChatPage />,
         label: 'Chat',
     },
+    {
+        path: '/login',
+        component: <Login />,
+        label: 'Login',
+    },
+    {
+        path: '/register',
+        component: <Register />,
+        label: 'Register',
+    },
+
 
 ]
 

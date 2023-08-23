@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import ballGif from '../assets/images/main.gif';
 import ballGif2 from '../assets/images/main2.gif';
@@ -6,14 +6,10 @@ import { ChatSelector } from "../cmps/ChatSelector";
 
 export function HomePage() {
     const scrollRef = useRef(null);
-
-    function handleClick() {
-        if (scrollRef.current) {
-            scrollRef.current.scrollIntoView({ behavior: 'smooth' });
-        }
-    }
+    const [location, setLocation] = useState(null)
 
     useEffect(() => {
+        handleLocation()
         const scrollPosition = localStorage.getItem('scrollPosition');
         if (scrollPosition) {
             window.scrollTo(0, parseInt(scrollPosition));
@@ -25,6 +21,28 @@ export function HomePage() {
             window.removeEventListener('beforeunload', handlePageRefresh);
         }
     }, [])
+
+    function handleLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(getUserCoords, failGeolocation)
+        } else {
+            console.log('Geolocation not supported');
+        }
+    }
+
+    function getUserCoords(position) {
+        console.log(position);
+    }
+
+    function failGeolocation() {
+        console.log("Unable to retrieve your location");
+    }
+
+    function handleClick() {
+        if (scrollRef.current) {
+            scrollRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
 
     const handlePageRefresh = () => {
         localStorage.setItem('scrollPosition', window.pageYOffset.toString());

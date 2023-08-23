@@ -6,7 +6,8 @@ import { IoIosArrowBack } from 'react-icons/io';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import personLogo from '../assets/images/man.svg';
 import balls from '../assets/images/small.gif';
-import { messageGPT } from "../services/api.js";
+import { apiPostRequest, messageGPT } from "../services/api.js";
+import LoadingSpinner from "../cmps/LoadingSpinner.jsx";
 
 export function ChatPage() {
     const navigate = useNavigate()
@@ -29,6 +30,10 @@ export function ChatPage() {
 
         }
     }, [])
+
+    useEffect(() => {
+        console.log(chatHistory);
+    }, [chatHistory])
 
     function getChatPageData() {
         const chatIdentifier = searchParams.get('identify')
@@ -54,8 +59,7 @@ export function ChatPage() {
         try {
             setIsLoading(true)
             if (isLoading) return
-
-            const res = await messageGPT(inputMsg)
+            const res = await apiPostRequest(`${process.env.REACT_APP_LOCAL_API_KEY}/api`, { requestString: inputMsg })
             const codeBlock = res.split('```')
 
             const codeBlocksInTags = codeBlock.map((block, index) => {
@@ -122,6 +126,8 @@ export function ChatPage() {
                             </div>
                         )
                     })}
+                    {isLoading && <LoadingSpinner />}
+
                 </div>
             </div>
         </>
